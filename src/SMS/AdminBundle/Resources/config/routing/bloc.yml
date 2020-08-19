@@ -1,0 +1,3 @@
+sms_admin_bloc:
+    path:     /ajoutbloc
+    defaults: { _controller: "SMSAdminBundle:Bloc:bloc" }

@@ -1,0 +1,37 @@
+{% extends 'SMSAdminBundle::base.html.twig' %}
+
+{% block body %}
+<div id="page-wrapper">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">Ajout de texte</h1>
+		</div>
+		<!-- /.col-lg-12 -->
+	</div>
+	<!-- /.row -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Ajout de texte
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-6">
+    <h1>page creation</h1>
+
+    <form name="page" method="post" action="{{path('page_new')}}" {{ form_enctype(form) }}>
+        <div id="page"><div><label for="page_content" class="required">Content</label>
+		 <textarea id="page_content" name="page[content]" required="required" class="form-control"></textarea></div><div><label for="page_titreMenu" class="required">Titre menu</label>
+		 <input type="text" id="page_titreMenu" name="page[titreMenu]" required="required" maxlength="255" class="form-control"/></div><div><label for="page_urlFile" class="required">Url file</label>
+		 <input type="text" id="page_urlFile" name="page[urlFile]" required="required" maxlength="255" class="form-control"/></div><div><label for="page_titre_menu">Titre menu</label><input type="text" id="page_titre_menu" name="page[titre_menu]" class="form-control"/></div>
+		 <input type="hidden" id="page__token" name="page[_token]" value="ex2R3ochfo9TBxAxg3oYQWyejlgZxQWutrFYy8sisaw" class="form-control"/></div>
+        <input type="submit" value="Create" class="form-control"/>
+    </form>
+
+    <ul>
+        <li>
+            <a href="{{ path('page_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

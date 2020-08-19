@@ -1,0 +1,41 @@
+﻿.header-top, #child-pages li a.button {background-color:#1B78E2; } /* 697884 -- Header Top Bar -- */
+header, a.secondary-button, .notification-listing {background-color:#6fbfec;} /* -- Secondary Button Background -- */
+@font-face {
+    font-family: 'JustVector';
+    src: url('social-icons/justvectorv2-webfont.eot');
+    src: url('social-icons/justvectorv2-webfont.eot?#iefix') format('eot'),
+         url('social-icons/justvectorv2-webfont.woff') format('woff'),
+         url('social-icons/justvectorv2-webfont.ttf') format('truetype'),
+         url('social-icons/justvectorv2-webfont.svg#webfontkw9J4lGf') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.social-icons {padding-top:2px;}
+.social-icons a {
+	font-size:11px; 
+	line-height:11px;
+	font-family: 'JustVector';  text-decoration:none;
+	color:#697884 ;
+	background:#fff; 
+	margin-right:2px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	padding:5px;
+	-moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.header-top { background-image:url(images/header-top.png); background-position:bottom left; background-repeat: repeat-x; padding:11px 0px 14px 0px;}
+header {background-image:url(images/header-bg.png); background-position: bottom left; background-repeat: repeat-x;}
+.width-container {width:940px; margin: 0 auto;}
+.header-top-left {float:left; font-size:13px; color:#fff; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.35);}
+.header-top-left a {color:#fff;}
+.social-icons a {background:#fff;}
+.header-top-left a:hover {color:#ddd;}
+.social-icons a:hover {background:#ddd;}
+.width-container .social-icons {float:right;}
+span.phone-header-top {position:relative;  top:2px;  background:url(images/phone-header-top.png) 0px 0px no-repeat; padding:2px 10px 3px 22px;}
+a.email-header-top { position:relative;  top:2px;  text-decoration:none; background:url(images/email-header-top.png) 0px 0px no-repeat; padding:3px 0px 3px 23px;}
+
+

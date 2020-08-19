@@ -1,0 +1,72 @@
+
+{% extends 'SMSAdminBundle::base.html.twig' %}
+
+{% block body %}
+<script src="jquery.js"></script>
+
+<script>
+
+
+	$('#generer').click(function() {
+	  $.ajax({
+		type: 'POST',
+		url: 'functions.php',
+		timeout: 3000,
+		data:
+		{
+			myFunction:'generer'
+		},                
+		success: function(data) {
+		  alert(data); 
+		},
+		error: function() {
+		  alert('La requête n\'a pas abouti'); 
+		}
+	  });   
+	});
+</script>
+<div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Liste de texte</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Liste de texte
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+         
+    <form name="categorie" method="post"  action="{{path('categorie_edit',{'id':categorie.id})}}" {{ form_enctype(edit_form) }} >
+        <div id="categorie">
+		   <div class="form-group">
+		        <div><label for="categorie_titreMenu" class="required">Titre menu</label>
+		           <input type="text" id="categorie_titreMenu" name="categorie[titreMenu]" required="required" maxlength="255"  class="form-control" value="{{categorie.titreMenu}}"/></div><div><label for="categorie_url" class="required">Url</label>
+		    </div>
+		<div class="form-group">
+		 <input type="text" id="categorie_url" name="categorie[url]" required="required" maxlength="255" class="form-control" value="{{categorie.url}}"/></div>
+		 </div>
+		 <div class="form-group">
+		 <input type="hidden" id="categorie__token" name="categorie[_token]" class="form-control" value="{{ edit_form._token.vars.value }}"/></div>
+		 </div>
+		 {{ form_widget(edit_form. _token) }}
+        <input type="submit" value="Edit" class="form-control"/>
+    </form>
+
+    <ul>
+        <li>
+            <a href="{{ path('categorie_index') }}">Back to the list</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

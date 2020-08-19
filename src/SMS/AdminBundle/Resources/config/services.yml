@@ -1,0 +1,4 @@
+services:
+#    sms_admin.example:
+#        class: SMS\AdminBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

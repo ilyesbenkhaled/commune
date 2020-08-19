@@ -1,0 +1,24 @@
+langue_index:
+    path:     /
+    defaults: { _controller: "SMSAdminBundle:Langue:index" }
+    methods:  GET
+
+langue_show:
+    path:     /{id}/show
+    defaults: { _controller: "SMSAdminBundle:Langue:show" }
+    methods:  GET
+
+langue_new:
+    path:     /new
+    defaults: { _controller: "SMSAdminBundle:Langue:new" }
+    methods:  [GET, POST]
+
+langue_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SMSAdminBundle:Langue:edit" }
+    methods:  [GET, POST]
+
+langue_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SMSAdminBundle:Langue:delete" }
+    methods:  DELETE

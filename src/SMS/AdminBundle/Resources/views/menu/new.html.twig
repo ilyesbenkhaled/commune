@@ -1,0 +1,36 @@
+{% extends 'SMSAdminBundle::base.html.twig' %}
+
+{% block body %}
+<div id="page-wrapper">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">Ajout de texte</h1>
+		</div>
+		<!-- /.col-lg-12 -->
+	</div>
+	<!-- /.row -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Ajout de texte
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-6">
+    <h1>menu creation</h1>
+
+    <form name="menu" method="post" action="{{path('menu_new')}}" {{ form_enctype(form) }}>
+        <div id="menu"><div><label for="menu_nomMenu" class="required">Nom menu</label>
+		   <input type="text" id="menu_nomMenu" name="menu[nomMenu]" required="required" maxlength="255" class="form-control" /></div><div><label for="menu_titreMenuId" class="required">Titre menu id</label>
+		   <input type="text" id="menu_titreMenuId" name="menu[titreMenuId]" required="required" class="form-control"/></div><div><label for="menu_titre_menu_id">Titre menu id</label>
+		   <input type="text" id="menu_titre_menu_id" name="menu[titre_menu_id]" class="form-control"/></div><input type="hidden" id="menu__token" name="menu[_token]" value="AVWWhKHLs3_Rd584KqJJ108pAxuNl4v2vQQX8hpilRQ" /></div>
+        <input type="submit" value="Create" />
+    </form>
+
+    <ul>
+        <li>
+            <a href="{{ path('menu_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

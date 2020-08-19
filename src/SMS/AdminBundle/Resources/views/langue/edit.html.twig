@@ -1,0 +1,74 @@
+{% extends 'SMSAdminBundle::base.html.twig' %}
+
+{% block body %}
+<div id="page-wrapper">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">Modifier le texte</h1>
+		</div>
+		<!-- /.col-lg-12 -->
+	</div>
+	<!-- /.row -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Modifier le texte
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-6">
+								<form name="langue" method="post" action="{{path('langue_edit',{'id':langue.id})}}" {{ form_enctype(edit_form) }}>
+									<div id="langue">
+										<div class="form-group">
+											<label for="langue_fRFr">Francais</label>
+											<textarea id="langue_fRFr" class="form-control" name="langue[fRFr]">{{ langue.fRFr }}</textarea>
+										</div>
+										<div class="form-group">
+											<label for="langue_eNEn">Anglais</label>
+											<textarea id="langue_eNEn" class="form-control" name="langue[eNEn]">{{ langue.eNEn }}</textarea>
+										</div>
+										<div class="form-group">
+											<label for="langue_aRAr">Arabe</label>
+											<textarea id="langue_aRAr" class="form-control" name="langue[aRAr]">{{ langue.aRAr }}</textarea>
+										</div>
+										<div class="form-group input-group">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="submit"><i class="fa fa-edit"></i> Edit
+											</button>
+										</span>
+									</div>
+									
+									</div>
+									<div class="form-group">
+										<input type="hidden" name="edit_form[_token]" value="{{ edit_form._token.vars.value }}" />
+									</div>
+									<div class="form-group">
+									   {{ form_errors(edit_form) }}								  
+									</div>
+									<div class="form-group">
+										{{ form_widget(edit_form. _token) }}
+									</div>	
+								</form>
+
+    
+								<ul>    
+									<li>     
+									   <a href="{{ path('langue_index') }}">Back to the list</a>
+									</li>
+									<li>										   
+										{{ form_start(delete_form) }}
+										<input type="submit" value="Delete">
+										{{ form_end(delete_form) }}
+								    </li>
+								   
+								</ul>
+							</div>
+						</div>
+					 </div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>			
+{% endblock %}

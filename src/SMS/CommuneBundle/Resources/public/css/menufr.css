@@ -1,0 +1,100 @@
+#menufr {
+    font-family: Arial;
+    font-size: 17px;
+    height: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0px;
+	margin-bottom: 50px;
+    width: 93%;
+    z-index: 100000;
+}
+#menufr ul {
+    float: right;
+    font-size: 15px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    z-index: 100000;
+}
+#menufr li {
+    float: right;
+    font-size: 12px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    z-index: 100000;
+}
+#menufr li {
+    width: 143.2px;
+}
+#menufr li a {
+    border: 1px solid #fff;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+#menufr .niveau1 li {
+    float: left;
+    margin: 0 -1px 0 0;
+}
+#menufr .niveau1 li a {
+    background-color: #0489b1;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 18px 0;
+}
+#menufr .niveau1 li:hover a, #menufr .niveau1 li a:hover {
+    background: #0489b1 none repeat scroll 0 0;
+    color: #fff;
+    z-index: 100000;
+}
+#menufr .niveau2 {
+    font-size: 16px;
+    position: absolute;
+    text-align: center;
+    top: -9999em;
+}
+#menufr .niveau2 li {
+    clear: left;
+    margin: -1px 0 0;
+}
+#menufr .niveau2 li a {
+    background: rgba(0, 0, 0, 0) url("images/menufr_bg.gif") repeat-x scroll 0 0;
+    color: #fff;
+    font-family: Arial;
+    font-weight: normal;
+    padding-right: 12px;
+    text-align: right;
+}
+#menufr .niveau2 li a:hover {
+    background: #01dfd7 none repeat scroll 0 0;
+    color: #246d86;
+    text-align: right;
+}
+#menufr li:hover .niveau2, #menufr .sfhover .niveau2 {
+    min-height: 0;
+    top: auto;
+}
+#menufr .niveau1 .niveau2 .niveau3 {
+    border-top: 1px solid #fff;
+    position: absolute;
+    top: -9999em;
+}
+#menufr .niveau3 li a {
+    background: #6d8600 none repeat scroll 0 0;
+    color: #fff;
+}
+#menufr .niveau3 li:hover a, #menufr .niveau3 li a:hover {
+    background: #d8ed1a none repeat scroll 0 0;
+    color: #746756;
+}
+#menufr .niveau2 li:hover .niveau3, #menufr .niveau2 .sfhover .niveau3 {
+    margin: -28px 0 0 149px;
+    top: auto;
+}
+#menufr .inverse .niveau2 li:hover .niveau3, #menufr .inverse .niveau2 .sfhover .niveau3 {
+    margin: -28px 0 0 -149px;
+    top: auto;
+}

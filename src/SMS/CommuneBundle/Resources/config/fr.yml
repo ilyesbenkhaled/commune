@@ -1,0 +1,4 @@
+sms_commune_fr:
+    path:     /
+    defaults: { _controller: SMSCommuneBundle:Accueilfr:index }
+    

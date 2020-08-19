@@ -1,0 +1,7 @@
+sms_commune_homepage:
+    path:     /
+    defaults: { _controller: SMSCommuneBundle:Accueil:index }
+    
+langue_language:
+    path:     /language/{_locale}
+    defaults: { _controller: SMSAdminBundle:Accueil:language }

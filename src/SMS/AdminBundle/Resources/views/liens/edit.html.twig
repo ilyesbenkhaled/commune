@@ -1,0 +1,62 @@
+
+{% extends 'SMSAdminBundle::base.html.twig' %}
+
+{% block body %}
+<script src="jquery.js"></script>
+
+<script>
+
+
+	$('#generer').click(function() {
+	  $.ajax({
+		type: 'POST',
+		url: 'functions.php',
+		timeout: 3000,
+		data:
+		{
+			myFunction:'generer'
+		},                
+		success: function(data) {
+		  alert(data); 
+		},
+		error: function() {
+		  alert('La requête n\'a pas abouti'); 
+		}
+	  });   
+	});
+</script>
+<div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Liste de texte</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Liste de texte
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+    <form name="liens" method="post"  action="{{path('liens_edit',{'id':liens.id})}}" {{ form_enctype(edit_form) }} >
+        <div id="liens"><div><label for="liens_image">Image</label><input type="text" id="liens_image" name="liens[image]" maxlength="255" value="test image" /></div><div><label for="liens_url">Url</label><input type="text" id="liens_url" name="liens[url]" maxlength="255" value="href" /></div><div><label class="required">Date creation</label><div id="liens_dateCreation"><div id="liens_dateCreation_date"><select id="liens_dateCreation_date_day" name="liens[dateCreation][date][day]"><option value="1">٠١</option><option value="2">٠٢</option><option value="3">٠٣</option><option value="4">٠٤</option><option value="5">٠٥</option><option value="6">٠٦</option><option value="7">٠٧</option><option value="8">٠٨</option><option value="9">٠٩</option><option value="10">١٠</option><option value="11">١١</option><option value="12">١٢</option><option value="13" selected="selected">١٣</option><option value="14">١٤</option><option value="15">١٥</option><option value="16">١٦</option><option value="17">١٧</option><option value="18">١٨</option><option value="19">١٩</option><option value="20">٢٠</option><option value="21">٢١</option><option value="22">٢٢</option><option value="23">٢٣</option><option value="24">٢٤</option><option value="25">٢٥</option><option value="26">٢٦</option><option value="27">٢٧</option><option value="28">٢٨</option><option value="29">٢٩</option><option value="30">٣٠</option><option value="31">٣١</option></select><select id="liens_dateCreation_date_month" name="liens[dateCreation][date][month]"><option value="1">٠١</option><option value="2">٠٢</option><option value="3" selected="selected">٠٣</option><option value="4">٠٤</option><option value="5">٠٥</option><option value="6">٠٦</option><option value="7">٠٧</option><option value="8">٠٨</option><option value="9">٠٩</option><option value="10">١٠</option><option value="11">١١</option><option value="12">١٢</option></select><select id="liens_dateCreation_date_year" name="liens[dateCreation][date][year]"><option value="2012">٢٠١٢</option><option value="2013">٢٠١٣</option><option value="2014">٢٠١٤</option><option value="2015">٢٠١٥</option><option value="2016">٢٠١٦</option><option value="2017" selected="selected">٢٠١٧</option><option value="2018">٢٠١٨</option><option value="2019">٢٠١٩</option><option value="2020">٢٠٢٠</option><option value="2021">٢٠٢١</option><option value="2022">٢٠٢٢</option></select></div><div id="liens_dateCreation_time">
+            <select id="liens_dateCreation_time_hour" name="liens[dateCreation][time][hour]"><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19" selected="selected">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>:<select id="liens_dateCreation_time_minute" name="liens[dateCreation][time][minute]"><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6" selected="selected">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option></select>        </div></div></div><div><label class="required">Date update</label><div id="liens_dateUpdate"><div id="liens_dateUpdate_date"><select id="liens_dateUpdate_date_day" name="liens[dateUpdate][date][day]"><option value="1">٠١</option><option value="2">٠٢</option><option value="3">٠٣</option><option value="4">٠٤</option><option value="5">٠٥</option><option value="6">٠٦</option><option value="7">٠٧</option><option value="8">٠٨</option><option value="9">٠٩</option><option value="10">١٠</option><option value="11">١١</option><option value="12">١٢</option><option value="13" selected="selected">١٣</option><option value="14">١٤</option><option value="15">١٥</option><option value="16">١٦</option><option value="17">١٧</option><option value="18">١٨</option><option value="19">١٩</option><option value="20">٢٠</option><option value="21">٢١</option><option value="22">٢٢</option><option value="23">٢٣</option><option value="24">٢٤</option><option value="25">٢٥</option><option value="26">٢٦</option><option value="27">٢٧</option><option value="28">٢٨</option><option value="29">٢٩</option><option value="30">٣٠</option><option value="31">٣١</option></select><select id="liens_dateUpdate_date_month" name="liens[dateUpdate][date][month]"><option value="1">٠١</option><option value="2">٠٢</option><option value="3" selected="selected">٠٣</option><option value="4">٠٤</option><option value="5">٠٥</option><option value="6">٠٦</option><option value="7">٠٧</option><option value="8">٠٨</option><option value="9">٠٩</option><option value="10">١٠</option><option value="11">١١</option><option value="12">١٢</option></select><select id="liens_dateUpdate_date_year" name="liens[dateUpdate][date][year]"><option value="2012">٢٠١٢</option><option value="2013">٢٠١٣</option><option value="2014">٢٠١٤</option><option value="2015">٢٠١٥</option><option value="2016">٢٠١٦</option><option value="2017" selected="selected">٢٠١٧</option><option value="2018">٢٠١٨</option><option value="2019">٢٠١٩</option><option value="2020">٢٠٢٠</option><option value="2021">٢٠٢١</option><option value="2022">٢٠٢٢</option></select></div><div id="liens_dateUpdate_time">
+            <select id="liens_dateUpdate_time_hour" name="liens[dateUpdate][time][hour]"><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19" selected="selected">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>:<select id="liens_dateUpdate_time_minute" name="liens[dateUpdate][time][minute]"><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6" selected="selected">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option></select>        </div></div></div><div><label for="liens_titre_id">Titre id</label><select id="liens_titre_id" name="liens[titre_id]"><option value=""></option><option value="2">test 2</option><option value="3">xx</option></select></div><input type="hidden" id="liens__token" name="liens[_token]" value="LoVglmoapUXesWb2pvjQWSzrZp_gQYFovWtYhiNAPtc" /></div>
+        <input type="submit" value="Edit" />
+    </form>
+
+    <ul>
+        <li>
+            <a href="{{ path('liens_index') }}">Back to the list</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

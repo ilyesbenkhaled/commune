@@ -1,0 +1,38 @@
+{% extends 'SMSAdminBundle::base.html.twig' %}
+
+{% block body %}
+<div id="page-wrapper">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">Ajout de texte</h1>
+		</div>
+		<!-- /.col-lg-12 -->
+	</div>
+	<!-- /.row -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Ajout de texte
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-6">
+
+    <form name="categorie" method="post" action="{{path('categorie_new')}}" {{ form_enctype(form) }}>
+	  <div class="form-group">
+        <div id="categorie"><div><label for="categorie_titreMenu" class="required">Titre menu</label>
+		<input type="text" id="categorie_titreMenu" name="categorie[titreMenu]" required="required" maxlength="255" class="form-control"/></div><div><label for="categorie_url" class="required">Url</label>
+		<input type="text" id="categorie_url" name="categorie[url]" required="required" maxlength="255" class="form-control"/></div><input type="hidden" id="categorie__token" name="categorie[_token]" value="{{ form._token.vars.value }}" /></div>
+        <input type="submit" value="Create" />
+		</div>
+		{{ form_widget(form. _token) }}
+    </form>
+
+
+    <ul>
+        <li>
+            <a href="{{ path('categorie_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

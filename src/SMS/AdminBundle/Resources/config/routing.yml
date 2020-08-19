@@ -1,0 +1,30 @@
+sms_admin_langue:
+    resource: "@SMSAdminBundle/Resources/config/routing/langue.yml"
+    prefix:   /langue
+sms_admin_liens:
+    resource: "@SMSAdminBundle/Resources/config/routing/liens.yml"
+    prefix:   /liens
+sms_admin_block:
+    resource: "@SMSAdminBundle/Resources/config/routing/block.yml"
+    prefix:   /block 
+sms_admin_accueil:
+    resource: "@SMSAdminBundle/Resources/config/routing/accueil.yml"
+    prefix:   /accueil    
+sms_admin_homepage:
+    path:     /
+    defaults: { _controller: SMSAdminBundle:Login:login }
+sms_admin_accueil:
+    path:     /accueil
+    defaults: { _controller: SMSAdminBundle:Accueil:accueil } 
+sms_admin_news:
+    path:     /news
+    defaults: { _controller: SMSAdminBundle:News:news }
+sms_admin_bloc:
+    path:     /ajoutbloc
+    defaults: { _controller: SMSAdminBundle:Bloc:bloc }
+sms_admin_categorie:
+    resource: "@SMSAdminBundle/Resources/config/routing/categorie.yml"
+    prefix:   /categorie 
+sms_admin_menu:
+    resource: "@SMSAdminBundle/Resources/config/routing/menu.yml"
+    prefix:   /menu    

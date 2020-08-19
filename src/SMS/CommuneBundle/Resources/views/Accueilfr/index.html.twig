@@ -1,0 +1,34 @@
+{% extends '::base.html.twig'%}
+{% block body %}
+    {% include 'SMSCommuneBundle:Accueilfr:header.html.twig' %}
+    <main>
+        <!--Main layout-->
+        <div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="collapse navbar-toggleable-xs" id="collapseEx">
+    {% include 'SMSCommuneBundle:Accueilfr:menu.html.twig' %}
+						</div>
+					<!--/.Collapse content-->
+				<!--/.Navbar-->
+				</div>
+			</div>
+            <div class="row">
+
+				<!--Sidebar left -->
+    {% include 'SMSCommuneBundle:Accueilfr:main.html.twig' %}
+    {% include 'SMSCommuneBundle:Accueilfr:footer.html.twig' %}
+{% block javascript %}
+    <script type="text/javascript" src="{{ asset('bundles/smscommune/js/jquery-2.2.3.min.js')}}"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{{ asset('bundles/smscommune/js/tether.min.js')}}"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{{ asset('bundles/smscommune/js/bootstrap.min.js')}}"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="{{ asset('bundles/smscommune/js/mdb.min.js')}}"></script>
+
+{% endblock %}
+{% endblock %}

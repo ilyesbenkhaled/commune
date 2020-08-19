@@ -1,0 +1,68 @@
+{% extends 'SMSAdminBundle::base.html.twig' %}
+
+{% block body %}
+<div id="page-wrapper">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">Ajout de texte</h1>
+		</div>
+		<!-- /.col-lg-12 -->
+	</div>
+	<!-- /.row -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Ajout de texte
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-6">
+							<form name="langue" method="post" action="{{path('langue_new')}}" {{ form_enctype(form) }}>
+								<div id="langue">
+									<div class="form-group">
+										<label for="langue_fRFr">Texte en FR</label>
+										<textarea id="langue_fRFr" class="form-control" name="langue[fRFr]"></textarea>
+									</div>
+									<div class="form-group">
+										<label for="langue_eNEn">Texte en EN</label>
+										<textarea id="langue_eNEn" class="form-control" name="langue[eNEn]"></textarea>
+									</div>
+									<div class="form-group">
+										<label for="langue_aRAr">Texte en AR</label>
+										<textarea id="langue_aRAr" class="form-control" name="langue[aRAr]"></textarea>
+									</div>
+									
+								</div>
+								
+								<div class="form-group input-group">
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="submit"><i class="fa fa-plus"></i> Create
+										</button>
+									</span>
+								</div>
+								<div class="form-group">
+									<input type="hidden" name="form[_token]" value="{{ form._token.vars.value }}" />
+								</div>
+								<div class="form-group">
+								   {{ form_errors(form) }}								  
+								</div>
+								<div class="form-group">
+									{{ form_widget(form. _token) }}
+								</div>
+							</form>
+							
+
+							<ul>
+								<li>
+									<a href="{{ path('langue_index') }}">Back to the list</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>			
+{% endblock %}

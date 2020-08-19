@@ -1,0 +1,4 @@
+sms_admin_accueil:
+    path:     /
+    defaults: { _controller: "SMSAdminBundle:Accueil:accueil" }
+    methods:  GET
